@@ -1,0 +1,38 @@
+.filters {
+  background: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  margin: 0 auto 20px;
+  max-width: 400px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.filters h3 {
+  margin-bottom: 16px;
+  font-size: 1.2rem;
+}
+
+.filter-group {
+  margin-bottom: 16px;
+}
+
+.filter-group label {
+  display: block;
+  margin-bottom: 6px;
+  font-weight: bold;
+}
+
+.filter-group select,
+.filter-group input[type="range"] {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.filter-group span {
+  display: block;
+  margin-top: 6px;
+  font-size: 0.9rem;
+  color: #555;
+}

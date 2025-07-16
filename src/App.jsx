@@ -1,26 +1,26 @@
-import Navbar from './Components/Navbar'
-import Hero from './Components/Hero'
-import Categories from './Components/Categories'
-import Products from './Components/Products'
-import PromoBanner from './Components/PromoBanner'
-import Testimonials from './Components/Testimonials'
-import Newsletter from './Components/Newsletter'
-import Footer from './Components/Footer'
-import './App.css'
-
-function App() {
+import React from 'react';
+import { Routes, Route } from 'react-router-dom';
+import Navbar from './Components/Navbar';
+import Hero from './Components/Hero';
+import ProductList from './components/ProductList';
+import Footer from './components/Footer';
+import Cart from './pages/Cart';
+import Category from './pages/Category';
+import SearchResults from './pages/SearchResults';
+ // Assuming you have a global CSS file for styles
+export default function App() {
   return (
     <>
       <Navbar />
-      <Hero />
-      <Categories />
-      <Products />
-      <PromoBanner />
-      <Testimonials />
-      <Newsletter />
+      <Routes>
+        <Route path="/" element={<><Hero /><ProductList /></>} />
+        <Route path="/cart" element={<Cart />} />
+        <Route path="/category/:name" element={<Category />} />
+        <Route path="/search/:query" element={<SearchResults />} />
+        <Route path="/category/:name" element={<Category />} />
+
+      </Routes>
       <Footer />
     </>
-  )
+  );
 }
-
-export default App
